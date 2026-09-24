@@ -1,0 +1,43 @@
+project:
+  name: image-captioning
+  seed: 42
+
+paths:
+  data_root: data
+  artifacts_root: artifacts
+
+runtime:
+  device: auto
+  num_workers: 0
+  mixed_precision: false
+
+data:
+  dataset: coco2017
+  split_seed: 42
+  debug_images: 1000
+  image_size: 224
+  max_caption_length: 32
+  tokenizer_name: bert-base-uncased
+
+model:
+  name: cnn_lstm
+  encoder: resnet50
+  pretrained: true
+  freeze_encoder: true
+  embedding_dim: 256
+  hidden_dim: 512
+  num_layers: 1
+  dropout: 0.3
+
+training:
+  batch_size: 8
+  epochs: 3
+  learning_rate: 0.0003
+  weight_decay: 0.01
+  gradient_clip: 1.0
+  patience: 3
+  monitor: val_loss
+  monitor_mode: min
+
+logging:
+  tensorboard: false

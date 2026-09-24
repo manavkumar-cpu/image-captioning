@@ -1,0 +1,33 @@
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.ipynb_checkpoints/
+
+data/raw/*
+data/processed/*
+data/metadata/*
+artifacts/*
+
+!.gitkeep
+!**/.gitkeep
+# Local environments
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Python and macOS
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Datasets, checkpoints and generated artifacts
+/data/
+/artifacts/
+*.pt
+*.pth
+*.ckpt
+*.zip

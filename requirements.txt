@@ -1,0 +1,11 @@
+# Initial compatible ranges, not a tested lockfile.
+# Install torch and torchvision together; pip resolves paired versions.
+
+torch>=2.5,<3
+torchvision>=0.20,<1
+transformers>=4.46,<5
+numpy>=1.26,<3
+Pillow>=10,<13
+PyYAML>=6,<7
+
+# Evaluation, TensorBoard and UI packages arrive in their phases.
